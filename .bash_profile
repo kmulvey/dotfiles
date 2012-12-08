@@ -1,56 +1,58 @@
 #!/bin/bash
 
 unset autologout
-set term=vt100
-HISTFILESIZE=900000
-HISTSIZE=900000
+PATH=/usr/bin:$PATH
+HISTFILESIZE=99999999
+HISTSIZE=99999999
 export HISTTIMEFORMAT="%m/%d/%y - %H:%M:%S "
 PS1="\u@\h: \W > "
 PS2="[\w] "
-export SVN_EDITOR=vim
-export PATH=${PATH}:/Applications/android-sdk/platform-tools
+GPG_TTY=$(tty) 
+export GPG_TTY
 
 clear
 
-echo ""
-echo ""
-echo "                       ___                         __         __        "
-echo "                      /\_ \                       /\ \       /\ \       "
-echo "   ___  ___    __  __ \//\ \     __  __      __   \ \ \____  \ \ \      "
-echo "  /' _ ''_ \  /\ \ \ \  \ \ \   /\ \ \ \   /'__'\  \ \  __ \  \ \_\     "
-echo " /\ \/\ \/\ \ \ \ \_\ \  \_\ \_ \ \ \ \ \ /\ \_\.\_ \ \ \ \ \  \/_/_    "
-echo " \ \_\ \_\ \_\ \ \____/  /\____\ \ \_\/_/ \ \__/.\_\ \ \_\ \_\   /\_\   "
-echo "  \/_/\/_/\/_/  \/___/   \/____/  \/___/   \/__/\/_/  \/_/ /_/   \/_/   "
-echo ""
+
+CPUTIME=$(ps -eo pcpu | awk 'NR>1' | awk '{tot=tot+$1} END {print tot}')
+CPUCORES=$(cat /proc/cpuinfo | grep -c processor)
+
+echo "
+================================================================================================
+
+System Summary (collected `date`)
+
+ - CPU Usage (average)       = `echo $CPUTIME / $CPUCORES | bc`%
+ - Memory free (real)        = `free -m | head -n 2 | tail -n 1 | awk {'print $4'}` Mb
+ - Memory free (cache)       = `free -m | head -n 3 | tail -n 1 | awk {'print $3'}` Mb
+ - Swap in use               = `free -m | tail -n 1 | awk {'print $3'}` Mb
+ - System Uptime             =`uptime`
+ - Public IP                 = `curl --silent icanhazip.com`
+ - Private IP                = `ip addr show eth0 | awk '/inet\s/ { print $2 }'`
+ - Disk Space Used           = `df -h / | awk '{ a = $5 } END { print a }'`
+
+================================================================================================
+"
+
+
+#echo ""
+#echo ""
+#echo "                       ___                         __         __        "
+#echo "                      /\_ \                       /\ \       /\ \       "
+#echo "   ___  ___    __  __ \//\ \     __  __      __   \ \ \____  \ \ \      "
+#echo "  /' _ ''_ \  /\ \ \ \  \ \ \   /\ \ \ \   /'__'\  \ \  __ \  \ \_\     "
+#echo " /\ \/\ \/\ \ \ \ \_\ \  \_\ \_ \ \ \ \ \ /\ \_\.\_ \ \ \ \ \  \/_/_    "
+#echo " \ \_\ \_\ \_\ \ \____/  /\____\ \ \_\/_/ \ \__/.\_\ \ \_\ \_\   /\_\   "
+#echo "  \/_/\/_/\/_/  \/___/   \/____/  \/___/   \/__/\/_/  \/_/ /_/   \/_/   "
+#echo ""
 echo ""
 echo "DON'T PANIC"
 echo ""
 echo ""
 
-
-alias ls='ls -al'
+alias slide='sudo'
+alias mysql='/usr/bin/mysql -u root -p'
+alias ls='ls -al --color'
 alias sizels='ls -la | sort -n -k 5 | tail'
-alias varmsg='tail -f /var/adm/messages'
 alias varsize='df -h | grep var | grep -v run'
-alias gmail='alpine'
-alias tw='ssh theorywednesday.com'
 #alias search='find . -exec grep "pictures1" '{}' \; -print'
-
-##
-# Your previous /Users/kmulvey/.bash_profile file was backed up as /Users/kmulvey/.bash_profile.macports-saved_2009-12-13_at_20:38:34
-##
-
-# MacPorts Installer addition on 2009-12-13_at_20:38:34: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH=$HOME/.gem/ruby/1.8/bin/:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-##
-# Your previous /Users/kmulvey/.bash_profile file was backed up as /Users/kmulvey/.bash_profile.macports-saved_2011-09-02_at_13:49:20
-##
-
-# MacPorts Installer addition on 2011-09-02_at_13:49:20: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
 
