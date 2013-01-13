@@ -54,5 +54,6 @@ alias mysql='/usr/bin/mysql -u root -p'
 alias ls='ls -al --color'
 alias sizels='ls -la | sort -n -k 5 | tail'
 alias varsize='df -h | grep var | grep -v run'
+alias alpine='alpine -passfile /home/kmulvey/.pinestuff'
 #alias search='find . -exec grep "pictures1" '{}' \; -print'
 
