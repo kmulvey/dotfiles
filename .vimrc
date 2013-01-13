@@ -2,8 +2,6 @@ call pathogen#infect()
 
 colorscheme Tomorrow-Night
 
-" Lang hacks
-au BufRead,BufNewFile *.twig set filetype=htmljinja
 
 " line numbers
 set number
@@ -59,6 +57,12 @@ set ffs=unix,dos,mac
 
 " Be smart when using tabs ;)
 set smarttab
+
+" alt arrow to switch 
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
 " 1 tab == 4 spaces
 set shiftwidth=4
