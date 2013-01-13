@@ -5,7 +5,7 @@ PATH=/usr/bin:$PATH
 HISTFILESIZE=99999999
 HISTSIZE=99999999
 export HISTTIMEFORMAT="%m/%d/%y - %H:%M:%S "
-PS1="\u@\h: \W > "
+PS1="\u@\h: \W \$(parse_git_branch)> "
 PS2="[\w] "
 GPG_TTY=$(tty) 
 export GPG_TTY
@@ -51,9 +51,13 @@ echo ""
 
 alias slide='sudo'
 alias mysql='/usr/bin/mysql -u root -p'
+alias print='lpr -P opslp'
 alias ls='ls -al --color'
 alias sizels='ls -la | sort -n -k 5 | tail'
 alias varsize='df -h | grep var | grep -v run'
 alias alpine='alpine -passfile /home/kmulvey/.pinestuff'
 #alias search='find . -exec grep "pictures1" '{}' \; -print'
 
+function parse_git_branch {
+	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
