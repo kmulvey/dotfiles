@@ -1,0 +1,13 @@
+[user]
+	name = Kevin Mulvey
+[alias]
+	undo=reset --hard
+	s=status
+	c=commit -m
+	co=checkout
+[color]
+	ui = true
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
