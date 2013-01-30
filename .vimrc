@@ -2,8 +2,6 @@ call pathogen#infect()
 
 colorscheme Tomorrow-Night
 
-" Lang hacks
-au BufRead,BufNewFile *.twig set filetype=htmljinja
 
 " line numbers
 set number
@@ -45,6 +43,9 @@ syntax enable
 au BufRead,BufNewFile *.mh set syntax=mason
 au BufRead,BufNewFile *.md set syntax=mason
 au BufRead,BufNewFile *.mhtml set syntax=mason
+
+" map twig files correctly
+au BufRead,BufNewFile *.twig set filetype=htmljinja
 
 " for js syntax hi-lighting
 let g:html_indent_inctags = "html,body,head,tbody"
