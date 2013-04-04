@@ -55,6 +55,7 @@ alias ls='ls -al --color'
 alias sizels='ls -la | sort -n -k 5 | tail'
 alias varsize='df -h | grep var | grep -v run'
 alias alpine='alpine -passfile /home/kmulvey/.pinestuff'
+. ~/.xsession
 
 #du -ah $path --exclude='.snapshot' | sort -n -r | head -n $results
 
