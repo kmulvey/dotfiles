@@ -50,7 +50,6 @@ echo ""
 echo ""
 
 alias slide='sudo'
-alias mysql='/usr/bin/mysql -u root -p'
 alias print='lpr -P opslp'
 alias ls='ls -al --color'
 alias sizels='ls -la | sort -n -k 5 | tail'
