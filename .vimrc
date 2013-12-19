@@ -46,6 +46,7 @@ au BufRead,BufNewFile *.mhtml set syntax=mason
 
 " map twig files correctly
 au BufRead,BufNewFile *.twig set filetype=htmljinja
+au BufRead,BufNewFile *.swig set filetype=htmljinja
 
 " for js syntax hi-lighting
 let g:html_indent_inctags = "html,body,head,tbody"
