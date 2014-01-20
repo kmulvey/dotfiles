@@ -1,7 +1,7 @@
 #!/bin/bash
 
 unset autologout
-PATH=/usr/bin:${GOPATH//://bin:}/bin:$PATH
+PATH=/usr/local/bin:/usr/local/sbin:$PATH
 HISTFILESIZE=99999999
 HISTSIZE=99999999
 export HISTTIMEFORMAT="%m/%d/%y - %H:%M:%S "
@@ -33,6 +33,7 @@ alias ls='ls -al'
 alias gpg='gpg2'
 alias sizels='ls -la | sort -n -k 5 | tail'
 alias varsize='df -h | grep var | grep -v run'
+alias ed='ed -p:'
 #alias alpine='alpine -passfile /home/kmulvey/.pinestuff'
 
 #du -ah $path --exclude='.snapshot' | sort -n -r | head -n $results
