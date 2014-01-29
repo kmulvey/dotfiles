@@ -34,9 +34,6 @@ alias gpg='gpg2'
 alias sizels='ls -la | sort -n -k 5 | tail'
 alias varsize='df -h | grep var | grep -v run'
 alias ed='ed -p:'
-#alias alpine='alpine -passfile /home/kmulvey/.pinestuff'
-
-#du -ah $path --exclude='.snapshot' | sort -n -r | head -n $results
 
 function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
