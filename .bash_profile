@@ -38,6 +38,7 @@ alias ed='ed -p:'
 
 #du -ah $path --exclude='.snapshot' | sort -n -r | head -n $results
 
+source /usr/local/etc/bash_completion.d/git-completion.bash
 function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
