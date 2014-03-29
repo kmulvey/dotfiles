@@ -1,7 +1,7 @@
 #!/bin/bash
 
 unset autologout
-PATH=/usr/local/bin:/usr/local/sbin:$PATH
+PATH=/usr/local/Cellar:$PATH
 HISTFILESIZE=99999999
 HISTSIZE=99999999
 export HISTTIMEFORMAT="%m/%d/%y - %H:%M:%S "
