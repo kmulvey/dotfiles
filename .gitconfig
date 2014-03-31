@@ -3,9 +3,10 @@
 	email = kevin@example.com
 [alias]
 	undo=reset --hard
-	s=status
+	a=add --all
 	c=commit -m
 	co=checkout
+	s=status
 [color]
 	ui = true
 [diff]
