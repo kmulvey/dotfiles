@@ -1,5 +1,6 @@
 [user]
 	name = Kevin Mulvey
+	email = kevin@example.com
 [alias]
 	undo=reset --hard
 	a=add --all
