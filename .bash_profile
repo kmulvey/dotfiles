@@ -1,7 +1,7 @@
 #!/bin/bash
 
 unset autologout
-PATH=/usr/local/bin:/usr/local/sbin:$PATH
+PATH=/usr/local/Cellar:$PATH
 HISTFILESIZE=99999999
 HISTSIZE=99999999
 export HISTTIMEFORMAT="%m/%d/%y - %H:%M:%S "
@@ -35,7 +35,10 @@ alias sizels='ls -la | sort -n -k 5 | tail'
 alias varsize='df -h | grep var | grep -v run'
 alias ed='ed -p:'
 
-source /usr/local/etc/bash_completion.d/git-completion.bash
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+	. /usr/local/etc/bash_completion.d/git-completion.bash
+fi
+
 function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
