@@ -116,7 +116,7 @@ trap 'gpg_failed' 2
 ## pipe the message body into the gpg clearsign command
 ## pine will read the signed message from STDOUT
 ##
-{ echo "${body}" ; echo ; } | gpg2 --local-user "${from}" --clearsign || gpg_failed
+{ echo "${body}" ; echo ; } | gpg2 --local-user "A8A6F857" --clearsign || gpg_failed
 
 #############################################
 ## unset variables that we don't need anymore
