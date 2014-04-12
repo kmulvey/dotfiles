@@ -48,6 +48,9 @@ au BufRead,BufNewFile *.mhtml set syntax=mason
 au BufRead,BufNewFile *.twig set filetype=htmljinja
 au BufRead,BufNewFile *.swig set filetype=htmljinja
 
+" map go files
+au BufRead,BufNewFile *.go set filetype=go
+
 " for js syntax hi-lighting
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
