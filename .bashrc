@@ -56,6 +56,7 @@ fi
 
 
 alias slide='sudo'
+alias gpg='gpg2'
 alias print='lpr -P opslp'
 alias ls='ls -al --color'
 alias sizels='ls -la | sort -n -k 5 | tail'
