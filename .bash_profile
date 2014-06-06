@@ -28,6 +28,7 @@ echo ""
 echo ""
 
 alias slide='sudo'
+alias gpg='gpg2'
 alias print='lpr -P opslp'
 alias ls='ls -al'
 alias gpg='gpg2'
