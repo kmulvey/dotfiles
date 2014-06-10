@@ -46,8 +46,7 @@ sub printPrivateMappings ()
     $~ = 'SECTION_ITEM';
     $- = 0;
     $= = 100000000;
-    foreach  $vma (sort {-($a->private_dirty <=> $b->private_dirty)} 
-				   privateMappings ()) {
+    foreach  $vma (sort {-($a->private_dirty <=> $b->private_dirty)} privateMappings ()) {
 	$size  = $vma->size;
 	$dirty = $vma->private_dirty;
 	$clean = $vma->private_clean;
