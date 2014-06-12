@@ -7,7 +7,7 @@ use Linux::Smaps;
 
 my $pid=shift @ARGV;
 unless ($pid) {
-	print "./smem.pl <pid>\n";
+    print "./smem.pl <pid>\n";
 	exit 1;
 }
 my $map=Linux::Smaps->new($pid);
