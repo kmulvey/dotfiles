@@ -12,7 +12,7 @@
 	branch = master
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
-	url = git@github.com:kien/ctrlp.vim.git
+	url = https://github.com/kien/ctrlp.vim.git
 	branch = master
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
