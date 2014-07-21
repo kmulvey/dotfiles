@@ -4,7 +4,7 @@
 	branch = master
 [submodule ".vim/bundle/less"]
 	path = .vim/bundle/less
-	url = git@github.com:groenewege/vim-less.git
+	url = https://github.com/groenewege/vim-less.git
 	branch = master
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
