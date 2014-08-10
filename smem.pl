@@ -64,7 +64,7 @@ sub printSharedMappings ()
     $= = 100000000;
     
     foreach  $vma (sort {-(($a->shared_clean + $a->shared_dirty)
-			   <=>
+	<=>
 			   ($b->shared_clean + $b->shared_dirty))} 
 		   sharedMappings ()) {
 	
