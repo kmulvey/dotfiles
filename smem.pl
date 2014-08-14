@@ -65,7 +65,7 @@ sub printSharedMappings ()
     
     foreach  $vma (sort {-(($a->shared_clean + $a->shared_dirty)
 	<=>
-		($b->shared_clean + $b->shared_dirty))} 
+	($b->shared_clean + $b->shared_dirty))} 
 		sharedMappings ()) {
 	
 	$size  = $vma->size;
