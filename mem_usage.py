@@ -30,8 +30,7 @@ def parse_smaps(pid):
     hex = lambda s: int(s, 16)
     
     ret = []
-    header = re.compile(r'^([0-9a-f]+)-([0-9a-f]+) (....) ([0-9a-f]+) '
-                        r'(..):(..) (\d+) *(.*)$')
+    header = re.compile(r'^([0-9a-f]+)-([0-9a-f]+) (....) ([0-9a-f]+) 'r'(..):(..) (\d+) *(.*)$')
     detail = re.compile(r'^(.*): +(\d+) kB')
     for line in maps:
         m = header.match(line)
