@@ -1,7 +1,7 @@
 #!/bin/bash
 
 unset autologout
-PATH=/usr/bin:$PATH
+PATH=/usr/bin:/home/kmulvey/bin/:$PATH
 HISTFILESIZE=99999999
 HISTSIZE=99999999
 GPG_TTY=$(tty) 
@@ -56,6 +56,7 @@ fi
 
 
 alias slide='sudo'
+alias gpg='gpg2'
 alias print='lpr -P opslp'
 alias ls='ls -al --color'
 alias sizels='ls -la | sort -n -k 5 | tail'
@@ -75,3 +76,6 @@ function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+
+PERL_MB_OPT="--install_base \"/home/kmulvey/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/kmulvey/perl5"; export PERL_MM_OPT;
