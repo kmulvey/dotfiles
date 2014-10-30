@@ -30,7 +30,7 @@ System Summary (collected `date`)
  - Swap in use               = `free -m | tail -n 1 | awk {'print $3'}` Mb
  - System Uptime             =`uptime`
  - Public IP                 = `curl --silent icanhazip.com`
- - Private IP                = `ip addr show em1 | awk '/inet\s/ { print $2 }'`
+ - Private IP                = `ip addr show eth0 | awk '/inet\s/ { print $2 }'`
  - Disk Space Used           = `df -h / | awk '{ a = $5 } END { print a }'`
 
 ================================================================================================
