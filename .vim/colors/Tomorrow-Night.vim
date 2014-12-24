@@ -281,6 +281,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Structure", s:purple, "", "")
 	call <SID>X("Function", s:blue, "", "")
 	call <SID>X("Constant", s:orange, "", "")
+	call <SID>X("Keyword", s:orange, "", "")
 	call <SID>X("String", s:green, "", "")
 	call <SID>X("Special", s:foreground, "", "")
 	call <SID>X("PreProc", s:purple, "", "")
@@ -344,11 +345,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javascriptGlobal", s:blue, "", "")
 	call <SID>X("javascriptStatement", s:red, "", "")
 
-        " CoffeeScript Highlighting
-        call <SID>X("coffeeRepeat", s:purple, "", "")
-        call <SID>X("coffeeConditional", s:purple, "", "")
-        call <SID>X("coffeeKeyword", s:purple, "", "")
-        call <SID>X("coffeeObject", s:yellow, "", "")
+	" CoffeeScript Highlighting
+	call <SID>X("coffeeRepeat", s:purple, "", "")
+	call <SID>X("coffeeConditional", s:purple, "", "")
+	call <SID>X("coffeeKeyword", s:purple, "", "")
+	call <SID>X("coffeeObject", s:yellow, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:red, "", "")
@@ -459,20 +460,16 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("scalaConstructorSpecializer", s:yellow, "", "")
 	call <SID>X("scalaBackTick", s:blue, "", "")
 
+	" Git
+	call <SID>X("diffAdded", s:green, "", "")
+	call <SID>X("diffRemoved", s:red, "", "")
+	call <SID>X("gitcommitSummary", "", "", "bold")
+
 	" Delete Functions
 	delf <SID>X
 	delf <SID>rgb
 	delf <SID>colour
 	delf <SID>rgb_colour
-	delf <SID>rgb_level
-	delf <SID>rgb_number
-	delf <SID>grey_colour
-	delf <SID>grey_level
-	delf <SID>grey_number
-endif
-
-set background=dark
->rgb_colour
 	delf <SID>rgb_level
 	delf <SID>rgb_number
 	delf <SID>grey_colour
