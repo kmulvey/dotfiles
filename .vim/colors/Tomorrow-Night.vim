@@ -472,3 +472,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 endif
 
 set background=dark
+>rgb_colour
+	delf <SID>rgb_level
+	delf <SID>rgb_number
+	delf <SID>grey_colour
+	delf <SID>grey_level
+	delf <SID>grey_number
+endif
+
+set background=dark
