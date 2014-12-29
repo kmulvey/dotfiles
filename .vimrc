@@ -85,6 +85,10 @@ function! HasPaste()
 	return ''
 endfunction
 
-" ctrl-p ignore configs
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules)$'
+" read local config if exists
+if filereadable(".vim.custom")
+	so .vim.custom
+endif
 
+" ctrl-p ignore configs
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*
