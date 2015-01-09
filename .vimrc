@@ -9,6 +9,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bradfitz/goimports'
+filetype on
 
 colorscheme Tomorrow-Night
 
