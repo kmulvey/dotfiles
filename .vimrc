@@ -103,8 +103,8 @@ if filereadable(".vim.custom")
 	so .vim.custom
 endif
 
+let g:go_fmt_command = "goimports"
+
 " ctrl-p ignore configs
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*
 
-let g:go_fmt_command = "goimports"
-let g:go_fmt_autosave = 0
