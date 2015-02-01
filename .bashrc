@@ -1,7 +1,8 @@
 #!/bin/bash
 
 unset autologout
-PATH=/usr/bin:/home/kmulvey/bin/:$PATH
+export GOPATH=$HOME/go
+PATH=/usr/bin:/home/kmulvey/bin/:$PATH:$GOPATH/bin
 HISTFILESIZE=99999999
 HISTSIZE=99999999
 GPG_TTY=$(tty) 
