@@ -77,6 +77,8 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
+filetype indent on
+
 " Returns true if paste mode is enabled
 function! HasPaste()
 	if &paste
@@ -90,5 +92,11 @@ if filereadable(".vim.custom")
 	so .vim.custom
 endif
 
+let g:go_fmt_command = "goimports"
+
 " ctrl-p ignore configs
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*
+
+if &diff
+	colorscheme Tomorrow
+endif
