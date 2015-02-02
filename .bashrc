@@ -1,7 +1,8 @@
 #!/bin/bash
 
 unset autologout
-PATH=/usr/bin:/home/kmulvey/bin/:$PATH
+export GOPATH=$HOME/go
+PATH=/usr/bin:/home/kmulvey/bin/:$PATH:$GOPATH/bin
 HISTFILESIZE=99999999
 HISTSIZE=99999999
 GPG_TTY=$(tty) 
@@ -15,10 +16,10 @@ if [ -n "$PS1" ]; then
 PS1="\u@\h: \W \$(parse_git_branch)> "
 PS2="[\w] "
 
-clear
 CPUTIME=$(ps -eo pcpu | awk 'NR>1' | awk '{tot=tot+$1} END {print tot}')
 CPUCORES=$(cat /proc/cpuinfo | grep -c processor)
 
+clear
 echo "
 ================================================================================================
 
@@ -30,7 +31,7 @@ System Summary (collected `date`)
  - Swap in use               = `free -m | tail -n 1 | awk {'print $3'}` Mb
  - System Uptime             =`uptime`
  - Public IP                 = `curl --silent icanhazip.com`
- - Private IP                = `ip addr show eth0 | awk '/inet\s/ { print $2 }'`
+ - Private IP                = `ip addr show enp3s0 | awk '/inet\s/ { print $2 }'`
  - Disk Space Used           = `df -h / | awk '{ a = $5 } END { print a }'`
 
 ================================================================================================
@@ -75,7 +76,3 @@ fi
 function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-
-
-PERL_MB_OPT="--install_base \"/home/kmulvey/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/kmulvey/perl5"; export PERL_MM_OPT;
