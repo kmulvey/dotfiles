@@ -9,6 +9,9 @@ GPG_TTY=$(tty)
 export HISTTIMEFORMAT="%m/%d/%y - %H:%M:%S "
 export GPG_TTY
 export TERM=xterm
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 
 # skip if this is a non-interactive shell
 if [ -n "$PS1" ]; then
