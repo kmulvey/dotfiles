@@ -6,8 +6,8 @@ if [ -f /etc/bash_profile ]; then
 fi
 
 # Source local definitions
-if [ -f /home/kmulvey/.bashrc ]; then
-	. /home/kmulvey/.bashrc
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
 fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
