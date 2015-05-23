@@ -9,6 +9,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bradfitz/goimports'
+Plugin 'derekwyatt/vim-scala'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -111,5 +112,5 @@ let g:go_fmt_command = "goimports"
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*
 
 if &diff
-	colorscheme Tomorrow
+	colorscheme Tomorrow-Night
 endif
