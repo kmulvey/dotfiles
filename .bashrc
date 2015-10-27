@@ -29,9 +29,8 @@ echo "
 System Summary (collected `date`)
 
  - CPU Usage (average)       = `echo $CPUTIME / $CPUCORES | bc`%
- - Memory free (real)        = `free -m | head -n 2 | tail -n 1 | awk {'print $4'}` Mb
- - Memory free (cache)       = `free -m | head -n 3 | tail -n 1 | awk {'print $3'}` Mb
- - Swap in use               = `free -m | tail -n 1 | awk {'print $3'}` Mb
+ - Memory free               = `free -m | awk 'NR==2 { print $7}'` Mb
+ - Swap in use               = `free -m | awk 'NR==3 { print $3}'` Mb
  - System Uptime             =`uptime`
  - Public IP                 = `curl --silent icanhazip.com`
  - Private IP                = `ip addr show enp3s0 | awk '/inet\s/ { print $2 }'`
