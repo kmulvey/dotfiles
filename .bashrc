@@ -7,6 +7,7 @@ HISTFILESIZE=99999999
 HISTSIZE=99999999
 GPG_TTY=$(tty) 
 export HISTTIMEFORMAT="%m/%d/%y - %H:%M:%S "
+export HADOOP_CONF_DIR=/etc/hadoop/conf/
 export GPG_TTY
 export TERM=xterm
 export VISUAL=vim
