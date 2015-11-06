@@ -1,4 +1,18 @@
-call pathogen#infect()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'fatih/vim-go'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bradfitz/goimports'
+Plugin 'derekwyatt/vim-scala'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 colorscheme Tomorrow-Night
 
@@ -46,10 +60,6 @@ au BufRead,BufNewFile *.mhtml set syntax=mason
 
 " map twig files correctly
 au BufRead,BufNewFile *.twig set filetype=htmljinja
-au BufRead,BufNewFile *.swig set filetype=htmljinja
-
-" map go files
-au BufRead,BufNewFile *.go set filetype=go
 
 " for js syntax hi-lighting
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -81,6 +91,8 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
+filetype indent on
+
 " Returns true if paste mode is enabled
 function! HasPaste()
 	if &paste
@@ -88,3 +100,17 @@ function! HasPaste()
 	en
 	return ''
 endfunction
+
+" read local config if exists
+if filereadable(".vim.custom")
+	so .vim.custom
+endif
+
+let g:go_fmt_command = "goimports"
+
+" ctrl-p ignore configs
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*
+
+if &diff
+	colorscheme Tomorrow-Night
+endif
