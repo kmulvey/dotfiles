@@ -42,7 +42,7 @@ fi
 alias slide='sudo'
 alias gpg='gpg2'
 alias print='lpr -P opslp'
-alias ls='ls -al --color'
+alias ls='ls -al'
 alias sizels='ls -la | sort -n -k 5 | tail'
 alias varsize='df -h | grep var | grep -v run'
 alias alpine='alpine -passfile /home/kmulvey/.pinestuff'
