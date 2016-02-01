@@ -482,12 +482,15 @@ const SliderItem = new Lang.Class({
     _init: function(value) {
         this.parent();
 
-        this._box = new St.Table({style_class: 'slider-item'});
+        //this._box = new St.Table({style_class: 'slider-item'});
+        this._box = new St.Widget({style_class: 'slider-item', layout_manager: new Clutter.TableLayout(), reactive: true });
 
         this._slider = new Slider.Slider(value);
 
-        this._box.add(this._slider.actor, {row: 0, col: 2, x_expand: true});
-        this.actor.add(this._box, {span: -1, expand: true});
+        //this._box.add(this._slider.actor, {row: 0, col: 2, x_expand: true});
+				this._box.layout_manager.pack(this._slider.actor, 2, 0);
+        
+				this.actor.add(this._box, {span: -1, expand: true});
     },
 
     setValue: function(value) {
