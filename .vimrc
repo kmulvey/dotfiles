@@ -10,6 +10,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bradfitz/goimports'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'Shougo/neocomplete.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -106,7 +108,6 @@ if filereadable(".vim.custom")
 	so .vim.custom
 endif
 
-let g:go_fmt_command = "goimports"
 
 " ctrl-p ignore configs
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*
@@ -114,3 +115,22 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*
 if &diff
 	colorscheme Tomorrow-Night
 endif
+
+" autocomplete
+let g:neocomplete#enable_at_startup = 1
+
+" golang
+let g:go_fmt_command = "goimports"
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>e <Plug>(go-rename)
