@@ -72,8 +72,8 @@ alias ed='ed -p:'
 
 #du -ah $path --exclude='.snapshot' | sort -n -r | head -n $results
 
-if [ -f /usr/share/doc/git/contrib/completion/git-completion.bash ]; then
-	. /usr/share/doc/git/contrib/completion/git-completion.bash
+if [ -f /usr/share/doc/git-core-doc/contrib/completion/git-completion.bash ]; then
+	. /usr/share/doc/git-core-doc/contrib/completion/git-completion.bash
 fi
 
 function parse_git_branch {
