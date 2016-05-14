@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DISPLAY=:1 firefox http://www.bloomberg.com/live &
+arecord -vv -c 1 -f S16_LE -r24000 `date +"%m-%d-%y"`.wav
