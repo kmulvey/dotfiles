@@ -1,4 +1,16 @@
 #!/bin/bash
 
+arecord -vv -f cd `date +"%m-%d-%y"`.wav &
+ARECORD_PID=$!
+
 DISPLAY=:1 firefox http://www.bloomberg.com/live &
-arecord -vv -c 1 -f S16_LE -r24000 `date +"%m-%d-%y"`.wav
+FF_PID=$!
+
+sleep 2h
+
+kill -9 $FF_PID
+DISPLAY=:1 firefox http://www.bloomberg.com/radio &
+FF_PID=$!
+
+sleep 3h
+kill -9 $FF_PID $ARECORD_PID
