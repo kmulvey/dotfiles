@@ -3,13 +3,13 @@
 arecord -vv -f cd `date +"%m-%d-%y"`.wav &
 ARECORD_PID=$!
 
-DISPLAY=:1 firefox http://www.bloomberg.com/live &
+DISPLAY=:1 firefox http://bloomberg.com/live &
 FF_PID=$!
 
 sleep 2h
 
 kill -9 $FF_PID
-DISPLAY=:1 firefox http://www.bloomberg.com/radio &
+DISPLAY=:1 firefox http://bloomberg.com/radio &
 FF_PID=$!
 
 sleep 3h
