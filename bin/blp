@@ -1,15 +1,15 @@
 #!/bin/bash
 
-arecord -vv -f cd `date +"%m-%d-%y"`.wav &
+arecord -vv -f cd -t raw | lame -r - `date +"%m-%d-%y"`.mp3 &
 ARECORD_PID=$!
 
-DISPLAY=:1 firefox http://www.bloomberg.com/live &
+DISPLAY=:0 google-chrome http://bloomberg.com/live --user-data-dir=.config/blp &
 FF_PID=$!
 
 sleep 2h
 
 kill -9 $FF_PID
-DISPLAY=:1 firefox http://www.bloomberg.com/radio &
+DISPLAY=:0 google-chrome http://bloomberg.com/radio --user-data-dir=.config/blp &
 FF_PID=$!
 
 sleep 3h
