@@ -5,6 +5,9 @@ if [ -f /etc/bash_profile ]; then
 	. /etc/bash_profile
 fi
 
+gpg-agent --daemon
+ssh-agent gnome-session
+
 # Source local definitions
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
