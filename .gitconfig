@@ -4,9 +4,10 @@
 [alias]
 	undo=reset --hard
 	a=add --all
-	c=commit -m
+	c=commit -S -m
 	co=checkout
 	s=status
+	l=log --show-signature
 [color]
 	ui = true
 [diff]
@@ -17,3 +18,5 @@
 	default = matching
 # [url "git@github.com:"]
 #	insteadOf = https://github.com/
+[gpg]
+        program = gpg2
