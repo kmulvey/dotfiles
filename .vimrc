@@ -116,8 +116,12 @@ if &diff
 	colorscheme Tomorrow-Night
 endif
 
-" autocomplete
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
 
 " golang
 let g:go_fmt_command = "goimports"
@@ -141,8 +145,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'gometalinter', 'gotype', 'govet']
-let g:syntastic_go_checkers = ['gometalinter']
+let g:syntastic_go_checkers = ['go', 'gofmt']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
