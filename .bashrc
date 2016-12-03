@@ -1,7 +1,7 @@
 #!/bin/bash
 
 unset autologout
-export GOPATH=$HOME/go
+export GOPATH=/opt/code/go
 PATH=/usr/bin:/home/kmulvey/bin/:$PATH:$GOPATH/bin
 HISTFILESIZE=99999999
 HISTSIZE=99999999
