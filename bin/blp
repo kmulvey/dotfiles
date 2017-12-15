@@ -1,4 +1,5 @@
 #!/bin/bash
+# sudo dnf install pavucontrol
 
 arecord -vv -f cd -t raw | lame -r - `date +"%m-%d-%y"`.mp3 &
 ARECORD_PID=$!
@@ -9,7 +10,7 @@ FF_PID=$!
 sleep 2h
 
 kill -9 $FF_PID
-DISPLAY=:0 google-chrome http://bloomberg.com/radio --user-data-dir=.config/blp &
+DISPLAY=:0 google-chrome https://www.bloomberg.com/audio --user-data-dir=.config/blp &
 FF_PID=$!
 
 sleep 3h
