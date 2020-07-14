@@ -4,9 +4,6 @@
 [submodule ".vim/pack/vendor/start/nerdtree"]
 	path = .vim/pack/vendor/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule ".vim/pack/tpope/start/fugitive"]
 	path = .vim/pack/tpope/start/fugitive
 	url = https://tpope.io/vim/fugitive.git
@@ -16,3 +13,9 @@
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = https://github.com/gitgutter/Vim.git
+[submodule ".vim/pack/vim-syntastic/start/syntastic"]
+	path = .vim/pack/vim-syntastic/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git

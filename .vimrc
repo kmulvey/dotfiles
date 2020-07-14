@@ -385,3 +385,15 @@ endfunction
 " kmulvey
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set number
+let g:go_fmt_command = "goimports"
+let g:syntastic_go_checkers = ['go', 'gofmt']
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
