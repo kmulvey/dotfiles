@@ -19,3 +19,6 @@
 [submodule ".vim/pack/vim-syntastic/start/syntastic"]
 	path = .vim/pack/vim-syntastic/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule ".vim/bundle/Vundle.vim"]
+	path = .vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim
