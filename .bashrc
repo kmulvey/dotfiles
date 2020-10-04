@@ -2,13 +2,14 @@
 
 unset autologout
 export GOPATH=/opt/code/go
-PATH=/usr/bin:$HOME/bin/:$PATH:$GOPATH/bin
+PATH=/usr/bin:$HOME/bin:$PATH:$GOPATH/bin
 HISTFILESIZE=99999999
 HISTSIZE=99999999
 GPG_TTY=$(tty) 
 export HISTTIMEFORMAT="%m/%d/%y - %H:%M:%S "
 export HADOOP_CONF_DIR=/etc/hadoop/conf/
 export GPG_TTY
+#export TERM=xterm-256color
 export TERM=xterm
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -34,7 +35,7 @@ System Summary (collected `date`)
  - Swap in use               = `free -m | awk 'NR==3 { print $3}'` Mb
  - System Uptime             =`uptime`
  - Public IP                 = `curl --silent icanhazip.com`
- - Private IP                = `ip addr show enp5s0 | awk '/inet\s/ { print $2 }'`
+ - Private IP                = `ip addr show eth0 | awk '/inet\s/ { print $2 }'`
  - Disk Space Used           = `df -h / | awk '{ a = $5 } END { print a }'`
 
 ================================================================================================
@@ -67,7 +68,8 @@ alias sizels='ls -la | sort -n -k 5 | tail'
 alias varsize='df -h | grep var | grep -v run'
 alias alpine='alpine -passfile /home/kmulvey/.pinestuff'
 alias ed='ed -p:'
-alias vi='vim'
+
+#. ~/.xsession
 
 #du -ah $path --exclude='.snapshot' | sort -n -r | head -n $results
 
