@@ -1,22 +1,24 @@
 [user]
-	name = Kevin Mulvey
-	email = kevin@example.com
+    name = Kevin Mulvey
+    email = kevin@example.com
 [alias]
-	undo=reset --hard
-	a=add --all
-	c=commit -S -m
-	co=checkout
-	s=status
-	l=log --show-signature
+    undo=reset --hard
+    a=add --all
+    c=commit -S -m
+    co=checkout
+    s=status
+    l=log --show-signature
 [color]
-	ui = true
+    ui = true
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 [push]
-	default = matching
+    default = matching
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 [gpg]
-	program = gpg2
+    program = gpg2
+[core]
+    attributesfile = /home/fedora/.gitattributes
