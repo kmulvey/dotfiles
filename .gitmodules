@@ -6,7 +6,7 @@
 	url = https://github.com/preservim/nerdtree.git
 [submodule ".vim/pack/tpope/start/fugitive"]
 	path = .vim/pack/tpope/start/fugitive
-	url = https://tpope.io/vim/fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule ".vim/pack/plugins/start/vim-go"]
 	path = .vim/pack/plugins/start/vim-go
 	url = https://github.com/fatih/vim-go.git
