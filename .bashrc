@@ -23,6 +23,7 @@ PS2="[\w] "
 
 CPUTIME=$(ps -eo pcpu | awk 'NR>1' | awk '{tot=tot+$1} END {print tot}')
 CPUCORES=$(cat /proc/cpuinfo | grep -c processor)
+LINK_NAME=$(ip addr | grep "BROADCAST,MULTICAST,UP,LOWER_UP" | awk '{ gsub(":", "", $2); print $2 }')
 
 clear
 echo "
@@ -35,7 +36,7 @@ System Summary (collected `date`)
  - Swap in use               = `free -m | awk 'NR==3 { print $3}'` Mb
  - System Uptime             =`uptime`
  - Public IP                 = `curl --silent icanhazip.com`
- - Private IP                = `ip addr show eth0 | awk '/inet\s/ { print $2 }'`
+ - Private IP                = `ip addr show $LINK_NAME | awk '/inet\s/ { print $2 }'`
  - Disk Space Used           = `df -h / | awk '{ a = $5 } END { print a }'`
 
 ================================================================================================
