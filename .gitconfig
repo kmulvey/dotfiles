@@ -22,3 +22,5 @@
     program = gpg2
 [core]
     attributesfile = /home/fedora/.gitattributes
+[commit]
+    gpgsign = true
