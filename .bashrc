@@ -13,7 +13,7 @@ export GPG_TTY
 export TERM=xterm
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export CONFLUENT_HOME=$HOME/confluent-6.0.1
+export CONFLUENT_HOME=$HOME/confluent-6.1.0
 
 # skip if this is a non-interactive shell
 if [ -n "$PS1" ]; then
@@ -81,3 +81,4 @@ fi
 function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+complete -C /usr/local/bin/bit bit
