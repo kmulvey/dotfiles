@@ -2,7 +2,7 @@
 
 unset autologout
 export GOPATH=/opt/code/go
-PATH=/usr/bin:$HOME/bin:$PATH:$GOPATH/bin
+PATH=/usr/bin:$HOME/bin:$PATH:$GOPATH/bin:$HOME/.local/bin:/usr/local/go/bin
 HISTFILESIZE=99999999
 HISTSIZE=99999999
 GPG_TTY=$(tty) 
