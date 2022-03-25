@@ -22,6 +22,3 @@
 [submodule ".vim/bundle/Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim
-[submodule "/home/kmulvey/.vim/pack/plugins/start/rust.vim"]
-	path = /home/kmulvey/.vim/pack/plugins/start/rust.vim
-	url = https://github.com/rust-lang/rust.vim
