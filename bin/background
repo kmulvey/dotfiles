@@ -3,4 +3,4 @@
 readarray -d '' images < <(find ~/Pictures -print0)
 images_len=${#images[*]}
 random_index=$(($RANDOM % $images_len))
-gsettings set org.gnome.desktop.background picture-uri "${images[$random_index]}"
+gsettings set org.gnome.desktop.background picture-uri-dark "${images[$random_index]}"
