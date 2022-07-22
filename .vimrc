@@ -35,6 +35,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'NLKNguyen/papercolor-theme'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -157,6 +158,14 @@ catch
 endtry
 
 set background=dark
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default': {
+  \       'transparent_background': 1
+  \     }
+  \   }
+  \ }
+colorscheme PaperColor
 
 " Set extra options when running in GUI mode
 if has("gui_running")
