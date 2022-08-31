@@ -1,6 +1,6 @@
 [user]
     name = Kevin Mulvey
-    email = kevin@example.com
+    email = kmulvey@linux.com
 [alias]
     undo=reset --hard
     a=add --all
@@ -16,11 +16,11 @@
     tool = vimdiff
 [push]
     default = matching
-[url "git@github.com:"]
-    insteadOf = https://github.com/
 [gpg]
     program = gpg2
 [core]
     attributesfile = /home/fedora/.gitattributes
 [commit]
     gpgsign = true
+[init]
+	defaultBranch = main
