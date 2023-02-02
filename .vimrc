@@ -158,14 +158,16 @@ catch
 endtry
 
 set background=dark
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default': {
-  \       'transparent_background': 1
-  \     }
-  \   }
-  \ }
-colorscheme PaperColor
+hi Normal guibg=NONE ctermbg=NONE
+"colorscheme PaperColor
+"let g:PaperColor_Theme_Options = {
+"  \   'theme': {
+"  \     'default.dark': {
+"  \       'transparent_background': 1,
+"  \         'linenumber_fg' : ['#C0C0C0', '232']
+"  \     }
+"  \   }
+"  \ }
 
 " Set extra options when running in GUI mode
 if has("gui_running")
