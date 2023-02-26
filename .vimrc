@@ -35,7 +35,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ycm-core/YouCompleteMe'
-Plugin 'NLKNguyen/papercolor-theme'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -159,15 +158,6 @@ endtry
 
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
-"colorscheme PaperColor
-"let g:PaperColor_Theme_Options = {
-"  \   'theme': {
-"  \     'default.dark': {
-"  \       'transparent_background': 1,
-"  \         'linenumber_fg' : ['#C0C0C0', '232']
-"  \     }
-"  \   }
-"  \ }
 
 " Set extra options when running in GUI mode
 if has("gui_running")
