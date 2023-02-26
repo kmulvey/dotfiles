@@ -1,21 +1,21 @@
 [submodule ".vim/pack/vendor/start/nerdtree"]
 	path = .vim/pack/vendor/start/nerdtree
-	url = git@github.com:preservim/nerdtree.git
+	url = https://github.com/preservim/nerdtree.git
 [submodule ".vim/pack/tpope/start/fugitive"]
 	path = .vim/pack/tpope/start/fugitive
-	url = git@github.com:tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule ".vim/pack/plugins/start/vim-go"]
 	path = .vim/pack/plugins/start/vim-go
-	url = git@github.com:fatih/vim-go.git
+	url = https://github.com/fatih/vim-go.git
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
-	url = git@github.com:ycm-core/YouCompleteMe.git
+	url = https://github.com/ycm-core/YouCompleteMe.git
 [submodule ".vim/pack/vim-syntastic/start/syntastic"]
 	path = .vim/pack/vim-syntastic/start/syntastic
-	url = git@github.com:vim-syntastic/syntastic.git
+	url = https://github.com/vim-syntastic/syntastic.git
 [submodule ".vim/bundle/Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
-	url = git@github.com:VundleVim/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim
 [submodule ".vim/pack/plugins/start/ctrlp"]
 	path = .vim/pack/plugins/start/ctrlp
-	url = git@github.com:ctrlpvim/ctrlp.vim.git
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
