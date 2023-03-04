@@ -15,9 +15,12 @@ if [ ! -f ".gitmodules" ]; then
     fi
 fi
 
+echo -e "\n========= submodule update =========\n"
 git submodule update --init --recursive
 
+echo -e "\n========= install deps =========\n"
 sudo dnf install cmake gcc-c++ make python3-devel
 
+echo -e "\n========= build YCM =========\n"
 cd ~/.vim/pack/plugins/start/YouCompleteMe
 python3 install.py --go-completer
