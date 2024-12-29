@@ -1,20 +1,25 @@
 #!/bin/bash
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
 unset autologout
-export GOPATH=$HOME/src/go
+export GOPATH=/opt/src/go
 export GOROOT=/usr/local/go
-PATH=/usr/bin:$HOME/bin:$PATH:$GOPATH/bin:$HOME/.local/bin:/usr/local/go/bin:$HOME/bin/node/bin:$HOME/bin/tarsnap
+#PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+#PATH=/usr/bin:$HOME/bin:$PATH:$GOPATH/bin:$HOME/.local/bin:/usr/local/go/bin::$HOME/bin/tarsnap:/usr/local/bin/:/usr/local/zig/
+PATH="$HOME/.local/bin:$HOME/bin:/usr/local/go/bin:$GOPATH/bin:/usr/local/zig/:/opt/node-v22.9.0-linux-x64/bin:$PATH"
 HISTFILESIZE=99999999
 HISTSIZE=99999999
 GPG_TTY=$(tty) 
 export HISTTIMEFORMAT="%m/%d/%y - %H:%M:%S "
-export HADOOP_CONF_DIR=/etc/hadoop/conf/
 export GPG_TTY
 #export TERM=xterm-256color
 export TERM=xterm
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export CONFLUENT_HOME=$HOME/confluent-6.1.0
 
 # skip if this is a non-interactive shell
 if [ -n "$PS1" ]; then
@@ -72,6 +77,8 @@ alias alpine='alpine -passfile /home/kmulvey/.pinestuff'
 alias ed='ed -p:'
 alias gt='go test -v -race -count 1 -parallel 5 ./...'
 alias gb='go clean -x ./... && go build -v -ldflags="-s -w" ./...'
+alias imageconvert='cd ~/src/go/src/github.com/kmulvey/imageconvert/cmd/imageconvert/'
+alias auto='cd ~/src/go/src/github.com/kmulvey/realesrgan-scheduler/cmd/auto/'
 
 #. ~/.xsession
 
