@@ -405,7 +405,8 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 
 " kmulvey
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_working_path_mode = 'ra'
 set number
 let g:go_fmt_command = "goimports"
 let g:syntastic_go_checkers = ['go', 'gofmt']
