@@ -13,14 +13,15 @@ if [ ! -f ".gitmodules" ]; then
         echo -e "\n========= ctrlp =========\n"
         git submodule add -f https://github.com/ctrlpvim/ctrlp.vim.git .vim/pack/plugins/start/ctrlp
     fi
+    git submodule update --init --recursive
 fi
 
 echo -e "\n========= submodule update =========\n"
-git submodule update --init --recursive
+git submodule update --recursive --remote
 
 echo -e "\n========= install deps =========\n"
 sudo dnf install cmake gcc-c++ make python3-devel
 
 echo -e "\n========= build YCM =========\n"
 cd ~/.vim/pack/plugins/start/YouCompleteMe
-python3 install.py --go-completer
+python3 install.py --go-completer --verbose
